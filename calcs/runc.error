@@ -1,0 +1,9 @@
+end of hernew
+ IGNORING BNDCHK
+*** End of DALTON calculation ***
+end of mcdrt
+end of mcuft
+ prnopt=                     0
+end of tran
+end of mcscf
+end of mcpc

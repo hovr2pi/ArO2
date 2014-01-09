@@ -1,0 +1,19 @@
+#
+#for i in 2.2 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0
+for i in 3.0 3.5
+#for i in 3.0 3.5 4.0 4.5 5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0
+do
+echo starting geometry $i
+cat > geom << EOF
+ O     8.0    0.00000000    0.00000000    0.00000000   15.99491464
+ O     8.0    0.00000000    2.2           0.00000000   15.99491464
+ Ar   18.0    $i           0.00000000    0.00000000   39.96238310
+EOF
+cat geom >> log.$i
+cp -p MOCOEFS_$i/mocoef_mc.sp mocoef
+runc -m 10000 >> log.$i
+mv LISTINGS/* LISTINGS_$i
+mv -n MOCOEFS/* MOCOEFS_$i
+mv -n MOLDEN MOLDEN_$i
+echo finishing geometry $i
+done

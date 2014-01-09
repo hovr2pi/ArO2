@@ -1,0 +1,8 @@
+&input
+ mo_left='mocoef.full'
+ mo_right='insert'
+ mo_out='insert'
+ lvprt=1
+ nfrzcr(1)=7 1
+ nfrzvr(1)=0 0
+ &end

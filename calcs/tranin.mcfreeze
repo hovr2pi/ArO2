@@ -1,0 +1,6 @@
+&input
+ LRC1MX=0
+ LRC2MX=0
+ FREEZE(1)=-1 -1 -1 -1 -1 -1 -1 
+ FREEZE(52)=-1 
+&end
